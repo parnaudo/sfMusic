@@ -21,11 +21,11 @@ for venue in venues:
 	#print data['resultsPage']['results']
 
 	for row in data['resultsPage']['results']['event']:
-		startDate = datetime.datetime.strptime(row['start']['date'], '%Y-%m-%d')
-		epochTimestamp = int(toEpoch(startDate)) + randint(0,1000)
+		start_date = datetime.datetime.strptime(row['start']['date'], '%Y-%m-%d')
+		epoch_timestamp = int(toEpoch(start_date)) + randint(0,1000)
 		output_string = row['start']['date'],row['displayName']
 	#	output_string = row['displayName'],row['venue']['displayName'],startDate,row['start']['time']
-		output[epochTimestamp]= output_string
+		output[epoch_timestamp]= output_string
 		count += 1
 		# print row['displayName'],row['venue']['displayName'],startDate,row['start']['time']
 
