@@ -10,6 +10,7 @@ def toEpoch(dt, epoch=datetime.datetime(1970,1,1)):
     td = dt - epoch
     # return td.total_seconds()
     return (td.microseconds + (td.seconds + td.days * 86400) * 10**6) / 10**6 
+   
 output = {}
 count = 0
 for venue in venues:
